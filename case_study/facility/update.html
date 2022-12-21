@@ -12,42 +12,37 @@
 <a th:href="@{/facility}">Quay lại trang list</a>
 <span th:text="${messages}"></span>
 <div id="form">
-    <form th:action="@{/facility/update}" method="post" th:object="${facilityDto}">
-        <!--        <label th:for="id"></label>-->
-        <!--        <input type="text" th:field="*{id}">-->
-
-        <label th:for="name">tên dịch vụ</label>
-        <input th:field="*{name}"><br>
-        <p  th:errors="*{name}" class="text-danger"></p>
-
-        <label th:for="area">diện tích sử dụng</label>
-        <input  th:field="*{area}"><br>
-        <p  th:errors="*{area}" class="text-danger"></p>
+    <form >
 
 
-        <label th:for="cost">chi phí thuê</label>
-        <input th:field="*{cost}"><br>
-        <p  th:errors="*{cost}" class="text-danger"></p>
+        <label >tên dịch vụ</label>
+        <input"><br>
 
-        <label th:for="maxPeople">số lượng người tối đa</label>
-        <input th:field="*{maxPeople}"><br>
-        <p  th:errors="*{maxPeople}" class="text-danger"></p>
+        <label>diện tích sử dụng</label>
+        <input  ><br>
 
-        <label th:for="rentType">kiểu thuê</label>
-        <select th:field="*{rentType}">
+
+        <label >chi phí thuê</label>
+        <input ><br>
+
+        <label >số lượng người tối đa</label>
+        <input><br>
+
+
+        <label>kiểu thuê</label>
+        <select >
             <option ${iteam.id==rentType.id?"selected":""} th:each="iteam : ${rentTypeList} " th:text="${iteam.name}" th:value="${iteam.id}" ></option>
         </select><br>
 
 
-        <label th:for="facilityType">loại dịch vụ</label>
-        <select th:field="*{facilityType}" id="facilityType">
+        <label >loại dịch vụ</label>
+        <select  id="facilityType">
             <option  ${iteam.id==facilityType.id?"selected":""}  th:each="iteam : ${facilityTypeDtoList} " th:text="${iteam.name}" th:value="${iteam.id}" ></option>
         </select><br>
 
         <div id="standardRoom"  >
-            <label  th:for="standardRoom">Tiêu chuẩn phòng</label>
-            <input th:field="*{standardRoom}"><br>
-            <p  th:errors="*{standardRoom}" class="text-danger"></p>
+            <label  >Tiêu chuẩn phòng</label>
+            <input ><br>
         </div>
 
         <div id="descriptionOtherCovenience" >
