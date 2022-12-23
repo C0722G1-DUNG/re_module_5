@@ -1,0 +1,7 @@
+<p>color </p>
+<input type="range" min="0" max="100" [(ngModel)]="r" (change)="setColor()">
+<input type="range" min="0" max="100" [(ngModel)]="b"  (change)="setColor()">
+<input type="range" min="0" max="100" [(ngModel)]="g"  (change)="setColor()">
+<div class="color" [style.background-color]="rbg">
+
+</div>
