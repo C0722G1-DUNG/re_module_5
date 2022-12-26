@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a040007-b949-4fde-88fe-e4a1b42b7c8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/case_study.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contract/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contract/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/card.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/facility/update.html" beforeDir="false" />
-    </list>
+    <list default="true" id="6a040007-b949-4fde-88fe-e4a1b42b7c8c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/prototype" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/component/component-furama" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,6 +60,7 @@
       <workItem from="1671691282901" duration="8780000" />
       <workItem from="1671766494500" duration="55000" />
       <workItem from="1671785107620" duration="225000" />
+      <workItem from="1672025758444" duration="72000" />
     </task>
     <servers />
   </component>
@@ -82,9 +68,9 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1671785332784">
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1672025828855">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1671785332784" />
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1672025828855" />
   </component>
 </project>
