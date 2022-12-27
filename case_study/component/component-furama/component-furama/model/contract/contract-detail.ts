@@ -1,6 +1,9 @@
+import {Contract} from "./contract";
+import {AttachFacility} from "./attach-facility";
+
 export interface ContractDetail {
-  IdHopDongChiTiet?: number;
-  IdHopDong?: number;
-  IdDichVuDiKem?: number;
-  SoLuong?: number;
+  id?: number;
+  quantity?: number;
+  contract?: Contract;
+  attachFacility?: AttachFacility;
 }

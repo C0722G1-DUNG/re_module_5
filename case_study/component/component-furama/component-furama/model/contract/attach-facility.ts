@@ -1,7 +1,7 @@
 export interface AttachFacility {
-  IdDichVuDiKem?: number;
-  TenDichVuDiKem?: string;
-  Gia?: number;
-  DonVi?: number;
-  TrangThaiKhaDung?: string;
+  id?: number;
+  name?: string;
+  cost?: number;
+  unit?: string;
+  status?: string;
 }

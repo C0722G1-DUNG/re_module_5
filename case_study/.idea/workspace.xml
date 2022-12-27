@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a040007-b949-4fde-88fe-e4a1b42b7c8c" name="Default Changelist" comment="" />
+    <list default="true" id="6a040007-b949-4fde-88fe-e4a1b42b7c8c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/component-furama/component-furama/model/contract/attach-facility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/component/component-furama/component-furama/model/contract/attach-facility.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/component-furama/component-furama/model/contract/contract-detail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/component/component-furama/component-furama/model/contract/contract-detail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/component-furama/component-furama/model/contract/contract.ts" beforeDir="false" afterPath="$PROJECT_DIR$/component/component-furama/component-furama/model/contract/contract.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/component-furama/component-furama/model/customer/customer-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/component/component-furama/component-furama/model/customer/customer-type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/component-furama/component-furama/model/customer/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/component/component-furama/component-furama/model/customer/customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/component-furama/component-furama/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/component/component-furama/component-furama/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/component-furama/component-furama/src/app/list-contract/list-contract.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/component/component-furama/component-furama/src/app/list-contract/list-contract.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/component-furama/component-furama/src/app/list-customer/list-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/component/component-furama/component-furama/src/app/list-customer/list-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/component-furama/component-furama/src/app/list-customer/list-customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/component/component-furama/component-furama/src/app/list-customer/list-customer.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +72,8 @@
       <workItem from="1671766494500" duration="55000" />
       <workItem from="1671785107620" duration="225000" />
       <workItem from="1672025758444" duration="72000" />
+      <workItem from="1672112645693" duration="46000" />
+      <workItem from="1672114655504" duration="37000" />
     </task>
     <servers />
   </component>
@@ -68,9 +81,9 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1672025828855">
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1672114675236">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1672025828855" />
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1672114675236" />
   </component>
 </project>
