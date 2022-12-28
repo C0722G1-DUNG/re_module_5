@@ -10,16 +10,13 @@
 
   <label for="nameCustomer">nameCustomer</label>
   <span style="color:red;" *ngIf="formCustomerUpdate.controls.nameCustomer.hasError('required')&&formCustomerUpdate.controls.nameCustomer.touched">Không được để trống</span>
-
-
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.nameCustomer.hasError('pattern')&&formCustomerUpdate.controls.nameCustomer.touched">Vui lòng Nhập chữ đầu viết hoa</span>
   <br>
   <input id="nameCustomer" type="text" formControlName="nameCustomer" ><br>
 
 
   <label for="birthday">birthday</label>
   <span style="color:red;" *ngIf="formCustomerUpdate.controls.birthday.hasError('required')&&formCustomerUpdate.controls.birthday.touched">Không được để trống</span>
-
-
   <br>
   <input id="birthday" type="date" formControlName="birthday" ><br>
 
@@ -34,15 +31,13 @@
 
   <label for="idCard">id card</label>
   <span style="color:red;" *ngIf="formCustomerUpdate.controls.idCard.hasError('required')&&formCustomerUpdate.controls.idCard.touched">Không được để trống</span>
-
-
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.idCard.hasError('pattern')&&formCustomerUpdate.controls.idCard.touched">Vui lòng nhập đủ 3 số</span>
   <br>
   <input id="idCard" type="text" formControlName="idCard" ><br>
 
   <label for="phone" >phone</label>
   <span style="color:red;" *ngIf="formCustomerUpdate.controls.phone.hasError('required')&&formCustomerUpdate.controls.phone.touched">Không được để trống</span>
-
-
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.phone.hasError('pattern')&&formCustomerUpdate.controls.phone.touched">Vui lòng Nhập bắt đầu từ 09 và có 9 số</span>
   <br>
   <input id="phone" type="text" formControlName="phone"><br>
 
@@ -50,15 +45,13 @@
 
   <label for="email" >email</label>
   <span style="color:red;" *ngIf="formCustomerUpdate.controls.email.hasError('required')&&formCustomerUpdate.controls.email.touched">Không được để trống</span>
-
-
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.email.hasError('pattern')&&formCustomerUpdate.controls.email.touched">Vui lòng Nhập đúng định dạng abc@gmail.com</span>
   <br>
   <input id="email" type="text" formControlName="email"><br>
 
 
   <label for="address" >address</label>
   <span style="color:red;" *ngIf="formCustomerUpdate.controls.address.hasError('required')&&formCustomerUpdate.controls.address.touched">Không được để trống</span>
-
   <br>
   <input id="address" type="text" formControlName="address" ><br>
 

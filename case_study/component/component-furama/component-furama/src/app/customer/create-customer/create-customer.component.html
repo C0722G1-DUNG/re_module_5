@@ -10,16 +10,13 @@
 
   <label for="nameCustomer">nameCustomer</label>
   <span style="color:red;" *ngIf="formCustomerCreate.controls.nameCustomer.hasError('required')&&formCustomerCreate.controls.nameCustomer.touched">Không được để trống</span>
-
-
+  <span style="color: red" *ngIf="formCustomerCreate.controls.nameCustomer.hasError('pattern')&&formCustomerCreate.controls.nameCustomer.touched">Vui lòng Nhập chữ đầu viết hoa </span>
   <br>
   <input id="nameCustomer" type="text" formControlName="nameCustomer" ><br>
 
 
   <label for="birthday">birthday</label>
   <span style="color:red;" *ngIf="formCustomerCreate.controls.birthday.hasError('required')&&formCustomerCreate.controls.birthday.touched">Không được để trống</span>
-
-
   <br>
   <input id="birthday" type="date" formControlName="birthday" ><br>
 
@@ -34,15 +31,13 @@
 
   <label for="idCard">id card</label>
   <span style="color:red;" *ngIf="formCustomerCreate.controls.idCard.hasError('required')&&formCustomerCreate.controls.idCard.touched">Không được để trống</span>
-
-
+  <span style="color: red" *ngIf="formCustomerCreate.controls.nameCustomer.hasError('pattern')&&formCustomerCreate.controls.nameCustomer.touched">Vui lòng nhập đủ 3 số </span>
   <br>
   <input id="idCard" type="text" formControlName="idCard" ><br>
 
   <label for="phone" >phone</label>
   <span style="color:red;" *ngIf="formCustomerCreate.controls.phone.hasError('required')&&formCustomerCreate.controls.phone.touched">Không được để trống</span>
-
-
+  <span style="color: red" *ngIf="formCustomerCreate.controls.phone.hasError('pattern')&&formCustomerCreate.controls.phone.touched">Vui lòng Nhập bắt đầu từ 09 và có 9 số </span>
   <br>
   <input id="phone" type="text" formControlName="phone"><br>
 
@@ -50,19 +45,18 @@
 
   <label for="email" >email</label>
   <span style="color:red;" *ngIf="formCustomerCreate.controls.email.hasError('required')&&formCustomerCreate.controls.email.touched">Không được để trống</span>
-
-
+  <span style="color: red" *ngIf="formCustomerCreate.controls.email.hasError('pattern')&&formCustomerCreate.controls.email.touched">Vui lòng Nhập đúng định dạng abc@gmail.com </span>
   <br>
   <input id="email" type="text" formControlName="email"><br>
 
 
   <label for="address" >address</label>
   <span style="color:red;" *ngIf="formCustomerCreate.controls.address.hasError('required')&&formCustomerCreate.controls.address.touched">Không được để trống</span>
-
   <br>
   <input id="address" type="text" formControlName="address" ><br>
 
-<label for="customerType">Loại khách hàng</label> <span style="color:red;" *ngIf="formCustomerCreate.controls.customerType.hasError('required')&&formCustomerCreate.controls.customerType.touched">Không được để trống</span>
+<label for="customerType">Loại khách hàng</label>
+  <span style="color:red;" *ngIf="formCustomerCreate.controls.customerType.hasError('required')&&formCustomerCreate.controls.customerType.touched">Không được để trống</span>
   <br>
   <select name="customerType" id="customerType" formControlName="customerType" >
     <option *ngFor="let c of customerTypeList" [ngValue]="c.id" >{{c.nameCustomerType}}</option>
