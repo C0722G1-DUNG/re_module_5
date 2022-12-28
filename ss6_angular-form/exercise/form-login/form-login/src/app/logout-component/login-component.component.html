@@ -1,0 +1,27 @@
+<form [formGroup]="logoutForm" (ngSubmit)="saveLogIn()">
+  <label for="email" >email</label>
+  <input type="text" id="email" name="email" formControlName="email"  ><br>
+<span style="color: red" *ngIf="logoutForm.controls.email.hasError('invalidEmail')&&logoutForm.controls.email.touched">Sai định dạng</span>
+
+  <label for="password">password</label>
+  <input id="password" type="password" name="password"  formControlName="password"   ><br>
+
+  <label for="confirm password">confirm password</label>  <span style="color: red" *ngIf="logoutForm.hasError('invalidPass')">KHông khớp</span><br>
+
+  <input id="confirm password" type="password" name="confirmPassword" formControlName="confirmPassword" ><br>
+  <label for="country">Khu vực</label>
+  <select id="country" name="country" formControlName="country">
+    <option [ngValue]="c.id" *ngFor="let c of countryList">{{c.name}}</option>
+  </select><br>
+
+  <label for="age">age</label>
+  <input type="text" id="age" name="age" formControlName="age"><br>
+
+  <label for="gender">Gender</label>
+<input type="radio" id="?gender" name="gender" value="nam" formControlName="gender">Nam
+<input type="radio" id="gender" name="gender" value="nữ" formControlName="gender">Nữ<br>
+
+  <label for="phone">Phone</label>
+  <input type="text" id="phone" name="phone" formControlName="phone"><br>
+<input type="submit" value="lưu">
+</form>
