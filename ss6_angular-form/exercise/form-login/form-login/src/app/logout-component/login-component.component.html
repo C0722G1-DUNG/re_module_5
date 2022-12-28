@@ -3,8 +3,8 @@
   <input type="text" id="email" name="email" formControlName="email"  ><br>
 <span style="color: red" *ngIf="logoutForm.controls.email.hasError('invalidEmail')&&logoutForm.controls.email.touched">Sai định dạng</span>
 
-  <label for="password">password</label>
-  <input id="password" type="password" name="password"  formControlName="password"   ><br>
+  <label for="password">password</label>   <span *ngIf="logoutForm.controls.password.hasError('minLength')" style="color: red" >Vui lòng nhập từ 6 ký tự trở lên</span><br>
+  <span *ngIf="logoutForm.controls.password.hasError('required')" style="color: red" >Không được để trống</span><br>  <input id="password" type="password" name="password"  formControlName="password"   ><br>
 
   <label for="confirm password">confirm password</label>  <span style="color: red" *ngIf="logoutForm.hasError('invalidPass')">KHông khớp</span><br>
 

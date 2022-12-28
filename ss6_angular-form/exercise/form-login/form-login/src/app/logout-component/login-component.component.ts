@@ -19,11 +19,11 @@ export class LoginComponentComponent implements OnInit {
   constructor() {
     this.logoutForm = new FormGroup({
         email: new FormControl("", [Validators.required, this.validateEmail]),
-        password: new FormControl("", [Validators.required]),
+        password: new FormControl("", [Validators.required,Validators.minLength(6)]),
         confirmPassword: new FormControl("", [Validators.required]),
-        country: new FormControl("", [Validators.required]),
+        country: new FormControl("", [Validators.required, Validators.min(18)]),
         gender: new FormControl("", [Validators.required]),
-        phone: new FormControl("", [Validators.required]),
+        phone: new FormControl("", [Validators.required,Validators.pattern('[+][8][4][ ][0-9]{9,10}')]),
         age: new FormControl("", [Validators.required]),
       },[this.checkPass]
       );
