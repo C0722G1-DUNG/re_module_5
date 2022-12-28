@@ -1,0 +1,72 @@
+<form class="form" [formGroup]="formCustomerUpdate" (ngSubmit)="saveCustomer()">
+  <h2>Update Customer</h2>
+  <label for="id">Id</label>
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.id.hasError('required')&&formCustomerUpdate.controls.id.touched">Không không được để trống</span>
+  <span style="color: red" *ngIf="formCustomerUpdate.controls.id.hasError('pattern')&&formCustomerUpdate.controls.id.touched">Vui lòng Nhập bắt đầu từ C và 4 chữ số </span>
+  <br>
+  <input id="id" type="text" formControlName="id" >
+
+
+
+  <label for="nameCustomer">nameCustomer</label>
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.nameCustomer.hasError('required')&&formCustomerUpdate.controls.nameCustomer.touched">Không được để trống</span>
+
+
+  <br>
+  <input id="nameCustomer" type="text" formControlName="nameCustomer" ><br>
+
+
+  <label for="birthday">birthday</label>
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.birthday.hasError('required')&&formCustomerUpdate.controls.birthday.touched">Không được để trống</span>
+
+
+  <br>
+  <input id="birthday" type="date" formControlName="birthday" ><br>
+
+
+  <label for="gender">Gender:</label>
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.gender.hasError('required')&&formCustomerUpdate.controls.gender.touched">Không được để trống</span>
+  <br>
+  <input type="radio" id="?gender" name="gender" value="nam" formControlName="gender">Nam/
+  <input type="radio" id="gender" name="gender" value="nữ" formControlName="gender">Nữ<br>
+
+
+
+  <label for="idCard">id card</label>
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.idCard.hasError('required')&&formCustomerUpdate.controls.idCard.touched">Không được để trống</span>
+
+
+  <br>
+  <input id="idCard" type="text" formControlName="idCard" ><br>
+
+  <label for="phone" >phone</label>
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.phone.hasError('required')&&formCustomerUpdate.controls.phone.touched">Không được để trống</span>
+
+
+  <br>
+  <input id="phone" type="text" formControlName="phone"><br>
+
+
+
+  <label for="email" >email</label>
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.email.hasError('required')&&formCustomerUpdate.controls.email.touched">Không được để trống</span>
+
+
+  <br>
+  <input id="email" type="text" formControlName="email"><br>
+
+
+  <label for="address" >address</label>
+  <span style="color:red;" *ngIf="formCustomerUpdate.controls.address.hasError('required')&&formCustomerUpdate.controls.address.touched">Không được để trống</span>
+
+  <br>
+  <input id="address" type="text" formControlName="address" ><br>
+
+  <label for="customerType">Loại khách hàng</label> <span style="color:red;" *ngIf="formCustomerUpdate.controls.customerType.hasError('required')&&formCustomerUpdate.controls.customerType.touched">Không được để trống</span>
+  <br>
+  <select name="customerType" id="customerType" formControlName="customerType" >
+    <option *ngFor="let c of customerTypeList" [ngValue]="c.id" >{{c.nameCustomerType}}</option>
+  </select>
+  <input type="submit" >
+
+</form>
