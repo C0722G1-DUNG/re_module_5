@@ -1,9 +1,11 @@
 <form [formGroup]="loginForm" (ngSubmit)="saveLogIn()">
-  <label for="email" >email</label>  <span style="color: red" *ngIf="loginForm.controls.email.hasError('invalidEmail')&&loginForm.controls.email.touched">Sai định dạng</span><br>
-
+  <label for="email" >email</label>
+  <span style="color: red" *ngIf="loginForm.controls.email.hasError('invalidEmail')&&loginForm.controls.email.touched">Sai định dạng</span>
+  <span style="color: red" *ngIf="loginForm.controls.email.hasError('required')&&loginForm.controls.email.touched">Sai định dạng</span><br>
   <input type="text" id="email" name="email" formControlName="email" ><br>
 
   <label for="password">password</label>
-
+  <span style="color: red" *ngIf="loginForm.controls.password.hasError('required')&&loginForm.controls.password.touched">Sai định dạng</span>
+  <span style="color: red" *ngIf="loginForm.controls.password.hasError('minLength')&&loginForm.controls.password.touched">Sai định dạng</span><br>
   <input id="password" type="password" name="password"  formControlName="password"  ><br>
 </form>

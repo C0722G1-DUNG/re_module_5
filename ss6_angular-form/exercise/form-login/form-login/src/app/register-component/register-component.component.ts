@@ -1,0 +1,53 @@
+import { Component, OnInit } from '@angular/core';
+import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
+
+@Component({
+  selector: 'app-register-component',
+  templateUrl: './register-component.component.html',
+  styleUrls: ['./register-component.component.css']
+})
+export class RegisterComponentComponent implements OnInit {
+  countryList = [
+    {id: 1, name: 'Việt Nam'},
+    {id: 2, name: 'Canada'},
+    {id: 1, name: 'Thailand'},
+    {id: 1, name: 'China'},
+  ]
+  logoutForm:FormGroup;
+  constructor() {   this.logoutForm = new FormGroup({
+      email: new FormControl("", [Validators.required, this.validateEmail]),
+      password: new FormControl("", [Validators.required,Validators.minLength(6)]),
+      confirmPassword: new FormControl("", [Validators.required]),
+      country: new FormControl("", [Validators.required, Validators.min(18)]),
+      gender: new FormControl("", [Validators.required]),
+      phone: new FormControl("", [Validators.required,Validators.pattern('[+][8][4][ ][0-9]{9,10}')]),
+      age: new FormControl("", [Validators.required]),
+    },[this.checkPass]
+  ); }
+
+  //custom theo forrm
+  checkPass(c: AbstractControl){
+    if (c.get('password')?.value!=c.get('confirmPassword')?.value){
+      return {"invalidPass": true}
+    }
+    return null
+  }
+
+//custom theo từng ô input
+  validateEmail(email: AbstractControl) {
+    if (!email.value.match("[a-zA-Z][\\w-]+@([\\w]+\\.[\\w]+|[\\w]+\\.[\\w]{2,}\\.[\\w]{2,})")) {
+      return {"invalidEmail": true}
+    }
+    return null;
+  }
+
+  saveLogIn() {
+    if (this.logoutForm.valid){
+      console.log(this.logoutForm);
+    }
+  }
+
+  ngOnInit(): void {
+  }
+
+}

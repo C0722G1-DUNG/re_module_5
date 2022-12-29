@@ -9,10 +9,10 @@ import {AbstractControl, FormControl, FormGroup, NgForm, Validators} from "@angu
 export class LoginComponentComponent implements OnInit {
 
   countryList = [
-    {id: 1, name: 'Đà Nẵng'},
-    {id: 2, name: 'QUảng Trị'},
-    {id: 1, name: 'Huế'},
-    {id: 1, name: 'Quảng Bình'},
+    {id: 1, name: 'Việt Nam'},
+    {id: 2, name: 'Canada'},
+    {id: 1, name: 'Thailand'},
+    {id: 1, name: 'China'},
   ]
   logoutForm:FormGroup;
 

@@ -1,7 +1,7 @@
 <form [formGroup]="logoutForm" (ngSubmit)="saveLogIn()">
   <label for="email" >email</label>
   <input type="text" id="email" name="email" formControlName="email"  ><br>
-<span style="color: red" *ngIf="logoutForm.controls.email.hasError('invalidEmail')&&logoutForm.controls.email.touched">Sai định dạng</span>
+  <span style="color: red" *ngIf="logoutForm.controls.email.hasError('invalidEmail')&&logoutForm.controls.email.touched">Sai định dạng</span>
 
   <label for="password">password</label>   <span *ngIf="logoutForm.controls.password.hasError('minLength')" style="color: red" >Vui lòng nhập từ 6 ký tự trở lên</span><br>
   <span *ngIf="logoutForm.controls.password.hasError('required')&&logoutForm.controls.password.touched" style="color: red" >Không được để trống</span><br>
@@ -25,12 +25,12 @@
   <label for="gender">Gender</label>
   <span *ngIf="logoutForm.controls.gender.hasError('required')&&logoutForm.controls.gender.touched" style="color: red" >Không được để trống</span><br>
   <input type="radio" id="?gender" name="gender" value="nam" formControlName="gender">Nam
-<input type="radio" id="gender" name="gender" value="nữ" formControlName="gender">Nữ<br>
+  <input type="radio" id="gender" name="gender" value="nữ" formControlName="gender">Nữ<br>
 
   <label for="phone">Phone</label>
   <span *ngIf="logoutForm.controls.phone.hasError('required')&&logoutForm.controls.phone.touched" style="color: red" >Không được để trống</span><br>
   <span *ngIf="logoutForm.controls.phone.hasError('pattern')&&logoutForm.controls.phone.touched" style="color: red" >bắt đầu từ +84. 9 chữ số</span><br>
 
   <input type="text" id="phone" name="phone" formControlName="phone"><br>
-<input type="submit" value="lưu">
+  <input type="submit" value="lưu">
 </form>
