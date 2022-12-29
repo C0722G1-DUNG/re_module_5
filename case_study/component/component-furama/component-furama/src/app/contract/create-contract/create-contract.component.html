@@ -1,23 +1,41 @@
-<form class="form">
+<form class="form" [formGroup]="formContractCreate" (ngSubmit)="saveContract()">
   <h2>Add new Contract</h2>
-  <label>Ngày bắt đầu gửi</label>
-  <input><br>
+  <label for="id">Id</label>
+  <span style="color:red;" *ngIf="formContractCreate.controls.id.hasError('required')&&formContractCreate.controls.id.touched">Không không được để trống</span>
+  <br>
+  <input id="id" formControlName="id" type="number"><br>
 
-  <label >Ngày kết thúc</label>
-  <input ><br>
 
-  <label>Tiền gửi</label>
-  <input ><br>
+  <label for="startDate">Ngày bắt đầu gửi</label>
+  <span style="color:red;" *ngIf="formContractCreate.controls.startDate.hasError('required')&&formContractCreate.controls.startDate.touched">Không không được để trống</span>
+  <br>
+  <input id="startDate" formControlName="startDate" type="text"><br>
 
-  <label >Khác hàng</label>
-  <select >
+  <label for="endDate" >Ngày kết thúc</label>
+  <span style="color:red;" *ngIf="formContractCreate.controls.endDate.hasError('required')&&formContractCreate.controls.endDate.touched">Không không được để trống</span>
+  <br>
+  <input id="endDate" formControlName="endDate" type="text" ><br>
+
+  <label for="deposit">Tiền gửi</label>
+  <span style="color:red;" *ngIf="formContractCreate.controls.deposit.hasError('required')&&formContractCreate.controls.deposit.touched">Không không được để trống</span>
+  <br>
+  <input id="deposit" formControlName="deposit" type="text" ><br>
+
+  <label for="customer" >Khác hàng</label>
+  <span style="color:red;" *ngIf="formContractCreate.controls.customer.hasError('required')&&formContractCreate.controls.customer.touched">Không không được để trống</span>
+  <br>
+  <select id="customer" formControlName="customer" >
     <option ></option>
   </select>
 
-  <label >Dịch vụ</label>
-  <select >
+  <label for="facility" >Dịch vụ</label>
+  <span style="color:red;" *ngIf="formContractCreate.controls.facility.hasError('required')&&formContractCreate.controls.facility.touched">Không không được để trống</span>
+  <br>
+  <select id="facility" formControlName="facility">
     <option></option>
   </select><br>
+
+
   <label>Dịch vụ đi kèm</label>
   <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAttachFacility">+</a>
   <input type="submit">

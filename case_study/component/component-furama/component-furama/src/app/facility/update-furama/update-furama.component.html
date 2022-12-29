@@ -1,5 +1,5 @@
 <form class="form" [formGroup]="formFacilityUpdate" (ngSubmit)="saveFacility()" >
-  <h2>Add new Facility</h2>
+  <h2>update Facility</h2>
 
   <label for="id">tên dịch vụ</label>  <span style="color:red;" *ngIf="formFacilityUpdate.controls.id.hasError('required')&&formFacilityUpdate.controls.id.touched">Không không được để trống</span>
 
