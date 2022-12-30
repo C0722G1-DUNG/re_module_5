@@ -14,14 +14,22 @@ export class ProductCreateComponent implements OnInit {
     name: new FormControl(),
     price: new FormControl(),
     description: new FormControl(),
+    category: new  FormControl()
   });
   constructor(private productService: ProductService) {
 
   }
+
   submit() {
-    const product = this.productForm.value;
-    this.productService.saveProduct(product);
-    this.productForm.reset();
+    if (this.productForm.valid){
+      const product = this.productForm.value;
+      this.productService.saveProduct(product).subscribe(data=>{
+          this.productForm.reset();
+        },error => {},
+        ()=>{}
+        );
+    }
+
   }
   ngOnInit(): void {
   }

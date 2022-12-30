@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Todo} from "../../model/todo";
+import {TodoService} from "../service/todo.service";
 
 let _id = 1;
 
@@ -10,13 +11,22 @@ let _id = 1;
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
+
   todos: Todo[] = [];
   content = new FormControl();
 
-  constructor() {
+  constructor(private todoService: TodoService) {
+    this.todoService.getAll().subscribe(data => {
+      console.log(data);
+      this.todos = data;
+    }, error => {
+
+    }, () => {
+
+    })
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   toggleTodo(i: number) {
@@ -27,12 +37,35 @@ export class TodoComponent implements OnInit {
     const value = this.content.value;
     if (value) {
       const todo: Todo = {
-        id: _id++,
         content: value,
         complete: false
       };
-      this.todos.push(todo);
-      this.content.reset();
+      this.todoService.saveTodo(todo).subscribe(data => {
+        console.log('data thêm nè'+data)
+      },error => {
+
+      },()=>{
+
+      });
+      this.todoService.getAll().subscribe(data => {
+        this.todos = data;
+        console.log(this.todos);
+        this.content.reset();
+      },error => {
+
+      },()=>{
+
+      });
+
     }
+  }
+  deleteTodo(number: any){
+    this.todoService.deleteId(parseInt(number)).subscribe(data => {
+      console.log('data xoá nè'+data)
+    });
+    alert("Bạn có muốn xoá")
+    this.todoService.getAll().subscribe(data => {
+      this.todos = data;
+    })
   }
 }

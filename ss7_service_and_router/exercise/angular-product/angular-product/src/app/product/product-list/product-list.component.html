@@ -7,6 +7,7 @@
     <td>Tên</td>
     <td>Giá</td>
     <td>Mô tả</td>
+    <td>Loại sản phẩm</td>
     <td>Delete</td>
     <td>update</td>
   </tr>
@@ -17,13 +18,14 @@
     <td>{{p.name}}</td>
     <td>{{p.price}}</td>
     <td>{{p.description}}</td>
+    <td>{{p.category}}</td>
     <td>
-      <!-- Button trigger modal -->
+<!--       Button trigger modal-->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="product=p">
-        Delete
-      </button>
+      Delete
+    </button>
     </td>
-    <td><a [routerLink]="['/product/update',p.id]"  class="btn btn-danger" >Edit</a></td>
+    <td><a [routerLink]="['/product/update',p.id]"  class="btn btn-danger" >Update</a></td>
   </tr>
   </tbody>
 </table>
