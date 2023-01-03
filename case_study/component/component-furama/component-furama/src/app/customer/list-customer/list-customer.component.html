@@ -1,3 +1,5 @@
+<a class="nav-link active" routerLink="/customer/create">Add New Customer</a>
+
 <table class="table">
   <thead>
   <tr>
@@ -10,13 +12,13 @@
     <th>email</th>
     <th>address</th>
     <th>nameCustomerType</th>
-    <th>update</th>
     <th>delete</th>
+    <th>update</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let item of customerList ;index as i">
-    <th scope="row">{{i+1}}</th>
+    <th scope="row">{{i + 1}}</th>
     <td>{{item.nameCustomer}}</td>
     <td>{{item.birthday}}</td>
     <td>{{item.gender}}</td>
@@ -25,6 +27,31 @@
     <td>{{item.email}}</td>
     <td>{{item.address}}</td>
     <td>{{item.customerType?.nameCustomerType}}</td>
+    <td>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DeleteModal" (click)="customer=item">
+        Delete
+      </button>
+    </td>
   </tr>
   </tbody>
 </table>
+<!-- Modal xóa -->
+<div class="modal fade" id="DeleteModal" tabindex="-1" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="DeleteModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <span>Bạn có muốn xóa khách hàng này không</span>
+        <span style="color: red">{{customer.nameCustomer}}</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

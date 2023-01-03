@@ -28,7 +28,6 @@ export class ProductDeleteComponent implements OnInit {
     this.productService.deleteById(this.proudct.id).subscribe(data => {
 
         console.log(this.proudct.id);
-        console.log("hfhfhfhfh");
         document.getElementById('exampleModal')?.click();
 
       }

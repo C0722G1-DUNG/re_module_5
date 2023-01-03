@@ -9,6 +9,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
 import { ProductUpdateComponent } from './product/product-update/product-update.component';
 import {HttpClientModule} from "@angular/common/http";
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {HttpClientModule} from "@angular/common/http";
     ProductListComponent,
     ProductCreateComponent,
     ProductDeleteComponent,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    NavbarComponent
   ],
     imports: [
         BrowserModule,

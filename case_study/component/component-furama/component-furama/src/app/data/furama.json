@@ -1,0 +1,54 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "nameCustomer": "Nguyễn Thị Hào",
+      "birthday": "1970-11-07",
+      "gender": false,
+      "id_card": "13456",
+      "phone": "091234",
+      "email": "thihao@",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "id": 2,
+        "nameCustomerType": "Platinium"
+      }
+    },
+    {
+      "id": 2,
+      "nameCustomer": "Phạm Xuân Diệu",
+      "birthday": "1971-11-07",
+      "gender": false,
+      "id_card": "13456",
+      "phone": "091544",
+      "email": "thihao@",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "id": 1,
+        "nameCustomerType": "Diamond"
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "nameCustomerType": "Diamond"
+    },
+    {
+      "id": 2,
+      "nameCustomerType": "Platinium"
+    },
+    {
+      "id": 3,
+      "nameCustomerType": "Gold"
+    },
+    {
+      "id": 4,
+      "nameCustomerType": "Slive"
+    },
+    {
+      "id": 5,
+      "nameCustomerType": "Member"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Iphone14",
+      "price": 123123,
+      "description": "New",
+      "category": {
+        "id": 2,
+        "name": "Made in Việt Nam"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Iphone20",
+      "price": 23456789,
+      "description": "New like",
+      "category": {
+        "id": 3,
+        "name": "Made in USD"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Iphone18",
+      "price": 123124,
+      "description": "99%",
+      "category": {
+        "id": 2,
+        "name": "Made in Việt Nam"
+      }
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Made in China"
+    },
+    {
+      "id": 2,
+      "name": "Made in Việt Nam"
+    },
+    {
+      "id": 3,
+      "name": "Made in USD"
+    }
+  ]
+}

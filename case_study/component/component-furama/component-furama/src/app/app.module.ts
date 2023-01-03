@@ -13,10 +13,12 @@ import { CreateCustomerComponent } from './customer/create-customer/create-custo
 import { ListContractComponent } from './contract/list-contract/list-contract.component';
 import { CreateContractComponent } from './contract/create-contract/create-contract.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
+
     HeaderComponent,
     ListFuramaComponent,
     UpdateFuramaComponent,
@@ -29,6 +31,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule

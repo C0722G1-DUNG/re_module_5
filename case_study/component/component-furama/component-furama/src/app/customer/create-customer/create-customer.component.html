@@ -59,7 +59,8 @@
   <span style="color:red;" *ngIf="formCustomerCreate.controls.customerType.hasError('required')&&formCustomerCreate.controls.customerType.touched">Không được để trống</span>
   <br>
   <select name="customerType" id="customerType" formControlName="customerType" >
-    <option *ngFor="let c of customerTypeList" [ngValue]="c.id" >{{c.nameCustomerType}}</option>
+    <option value="">---Vui Lòng chọn loại khách hàng</option>
+    <option *ngFor="let c of customerTypeList" [ngValue]="c" >{{c.nameCustomerType}}</option>
   </select>
   <input type="submit" >
 

@@ -1,84 +1,84 @@
-<form class="form" [formGroup]="formFacilityUpdate" (ngSubmit)="saveFacility()" >
-  <h2>update Facility</h2>
+<!--<form class="form" [formGroup]="formFacilityUpdate" (ngSubmit)="saveFacility()" >-->
+<!--  <h2>update Facility</h2>-->
 
-  <label for="id">tên dịch vụ</label>  <span style="color:red;" *ngIf="formFacilityUpdate.controls.id.hasError('required')&&formFacilityUpdate.controls.id.touched">Không không được để trống</span>
+<!--  <label for="id">tên dịch vụ</label>  <span style="color:red;" *ngIf="formFacilityUpdate.controls.id.hasError('required')&&formFacilityUpdate.controls.id.touched">Không không được để trống</span>-->
 
-  <input id="id" type="number" formControlName="id"><br>
+<!--  <input id="id" type="number" formControlName="id"><br>-->
 
-  <label for="name" >Tên dịch vụ</label>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.name.hasError('required')&&formFacilityUpdate.controls.name.touched">Không không được để trống</span>
-  <input id="name" type="text" formControlName="name" ><br>
-
-
-  <label for="area">Diện tích sử dụng</label>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.area.hasError('required')&&formFacilityUpdate.controls.area.touched">Không không được để trống</span>
-  <input id="area" formControlName="area" type="text"><br>
-
-  <label for="cost">chi phí thuê</label>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.cost.hasError('required')&&formFacilityUpdate.controls.cost.touched">Không không được để trống</span>
-  <input id="cost" formControlName="cost" type="text"><br>
-
-  <label for="maxPeople" >số lượng người tối đa</label>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.maxPeople.hasError('required')&&formFacilityUpdate.controls.maxPeople.touched">Không không được để trống</span>
-  <input id="maxPeople" formControlName="maxPeople" type="text"><br>
-
-  <label for="standardRoom" >Tiêu chuẩn phòng</label>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.standardRoom.hasError('required')&&formFacilityUpdate.controls.standardRoom.touched">Không không được để trống</span>
-  <input id="standardRoom" formControlName="standardRoom" type="text"><br>
-
-  <label for="descriptionOtherCovenience" >Mô tả tiện nghi khác</label>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.descriptionOtherCovenience.hasError('required')&&formFacilityUpdate.controls.descriptionOtherCovenience.touched">Không không được để trống</span>
-  <input id="descriptionOtherCovenience" formControlName="descriptionOtherCovenience" type="text"><br>
+<!--  <label for="name" >Tên dịch vụ</label>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.name.hasError('required')&&formFacilityUpdate.controls.name.touched">Không không được để trống</span>-->
+<!--  <input id="name" type="text" formControlName="name" ><br>-->
 
 
-  <label for="pollArea" >diện tích hồ bơi</label>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.pollArea.hasError('required')&&formFacilityUpdate.controls.pollArea.touched">Không không được để trống</span>
-  <input id="pollArea" formControlName="pollArea" type="text"><br>
+<!--  <label for="area">Diện tích sử dụng</label>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.area.hasError('required')&&formFacilityUpdate.controls.area.touched">Không không được để trống</span>-->
+<!--  <input id="area" formControlName="area" type="text"><br>-->
 
-  <label for="numberOfFloors" >số tầng</label>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.numberOfFloors.hasError('required')&&formFacilityUpdate.controls.numberOfFloors.touched">Không không được để trống</span>
-  <input id="numberOfFloors" formControlName="numberOfFloors" type="text"><br>
+<!--  <label for="cost">chi phí thuê</label>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.cost.hasError('required')&&formFacilityUpdate.controls.cost.touched">Không không được để trống</span>-->
+<!--  <input id="cost" formControlName="cost" type="text"><br>-->
 
-  <label for="facilityFree" >số tầng</label>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.facilityFree.hasError('required')&&formFacilityUpdate.controls.facilityFree.touched">Không không được để trống</span>
-  <input id="facilityFree" formControlName="facilityFree" type="text"><br>
+<!--  <label for="maxPeople" >số lượng người tối đa</label>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.maxPeople.hasError('required')&&formFacilityUpdate.controls.maxPeople.touched">Không không được để trống</span>-->
+<!--  <input id="maxPeople" formControlName="maxPeople" type="text"><br>-->
 
-  <label for="facilityType" >kiểu thuê</label>
-  <select id="facilityType" formControlName="facilityType" >
-    <option *ngFor="let f of facilityTypeList" [ngValue]="f.id" >{{f.name}}</option>
-  </select><br>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.facilityType.hasError('required')&&formFacilityUpdate.controls.facilityType.touched">Không không được để trống</span>
+<!--  <label for="standardRoom" >Tiêu chuẩn phòng</label>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.standardRoom.hasError('required')&&formFacilityUpdate.controls.standardRoom.touched">Không không được để trống</span>-->
+<!--  <input id="standardRoom" formControlName="standardRoom" type="text"><br>-->
 
-  <label for="rentType" >loại dịch vụ</label>
-  <select id="rentType" formControlName="rentType">
-    <option >...Chọn loại dịch vụ...</option>
-    <option *ngFor="let r of rentTypeList" [ngValue]="r.id">{{r.name}}</option>
-  </select><br>
-  <span style="color:red;" *ngIf="formFacilityUpdate.controls.rentType.hasError('required')&&formFacilityUpdate.controls.rentType.touched">Không không được để trống</span>
+<!--  <label for="descriptionOtherCovenience" >Mô tả tiện nghi khác</label>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.descriptionOtherCovenience.hasError('required')&&formFacilityUpdate.controls.descriptionOtherCovenience.touched">Không không được để trống</span>-->
+<!--  <input id="descriptionOtherCovenience" formControlName="descriptionOtherCovenience" type="text"><br>-->
 
-  <!--  <div id="standardRoom" style="display: none" >-->
-  <!--    <label >Tiêu chuẩn phòng</label>-->
-  <!--    <input><br>-->
-  <!--  </div>-->
 
-  <!--  <div id="descriptionOtherCovenience" style="display: none" >-->
-  <!--    <label >Mô tả tiện nghi khác</label>-->
-  <!--    <input ><br>-->
-  <!--  </div>-->
+<!--  <label for="pollArea" >diện tích hồ bơi</label>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.pollArea.hasError('required')&&formFacilityUpdate.controls.pollArea.touched">Không không được để trống</span>-->
+<!--  <input id="pollArea" formControlName="pollArea" type="text"><br>-->
 
-  <!--  <div id="pollArea" style="display: none" >-->
-  <!--    <label >diện tích hồ bơi</label>-->
-  <!--    <input ><br>-->
-  <!--  </div>-->
+<!--  <label for="numberOfFloors" >số tầng</label>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.numberOfFloors.hasError('required')&&formFacilityUpdate.controls.numberOfFloors.touched">Không không được để trống</span>-->
+<!--  <input id="numberOfFloors" formControlName="numberOfFloors" type="text"><br>-->
 
-  <!--  <div id="numberOfFloors" style="display: none" >-->
-  <!--    <label >số tầng</label>-->
-  <!--    <input ><br>-->
-  <!--  </div>-->
+<!--  <label for="facilityFree" >số tầng</label>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.facilityFree.hasError('required')&&formFacilityUpdate.controls.facilityFree.touched">Không không được để trống</span>-->
+<!--  <input id="facilityFree" formControlName="facilityFree" type="text"><br>-->
 
-  <!--  <div id="facilityFree" style="display: none" >-->
-  <!--    <label >dịch vụ miễn phí đi kèm</label>-->
-  <!--    <input><br>-->
-  <!--  </div>-->
-  <input type="submit">
-</form>
+<!--  <label for="facilityType" >kiểu thuê</label>-->
+<!--  <select id="facilityType" formControlName="facilityType" >-->
+<!--    <option *ngFor="let f of facilityTypeList" [ngValue]="f.id" >{{f.name}}</option>-->
+<!--  </select><br>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.facilityType.hasError('required')&&formFacilityUpdate.controls.facilityType.touched">Không không được để trống</span>-->
+
+<!--  <label for="rentType" >loại dịch vụ</label>-->
+<!--  <select id="rentType" formControlName="rentType">-->
+<!--    <option >...Chọn loại dịch vụ...</option>-->
+<!--    <option *ngFor="let r of rentTypeList" [ngValue]="r.id">{{r.name}}</option>-->
+<!--  </select><br>-->
+<!--  <span style="color:red;" *ngIf="formFacilityUpdate.controls.rentType.hasError('required')&&formFacilityUpdate.controls.rentType.touched">Không không được để trống</span>-->
+
+<!--  &lt;!&ndash;  <div id="standardRoom" style="display: none" >&ndash;&gt;-->
+<!--  &lt;!&ndash;    <label >Tiêu chuẩn phòng</label>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input><br>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--  &lt;!&ndash;  <div id="descriptionOtherCovenience" style="display: none" >&ndash;&gt;-->
+<!--  &lt;!&ndash;    <label >Mô tả tiện nghi khác</label>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input ><br>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--  &lt;!&ndash;  <div id="pollArea" style="display: none" >&ndash;&gt;-->
+<!--  &lt;!&ndash;    <label >diện tích hồ bơi</label>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input ><br>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--  &lt;!&ndash;  <div id="numberOfFloors" style="display: none" >&ndash;&gt;-->
+<!--  &lt;!&ndash;    <label >số tầng</label>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input ><br>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--  &lt;!&ndash;  <div id="facilityFree" style="display: none" >&ndash;&gt;-->
+<!--  &lt;!&ndash;    <label >dịch vụ miễn phí đi kèm</label>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <input><br>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+<!--  <input type="submit">-->
+<!--</form>-->

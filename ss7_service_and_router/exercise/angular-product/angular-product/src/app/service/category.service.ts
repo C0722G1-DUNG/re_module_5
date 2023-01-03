@@ -7,7 +7,7 @@ import {Category} from "../model/category";
   providedIn: 'root'
 })
 export class CategoryService {
-  private API_URL = "http://localhost:3000/product";
+  private API_URL = "http://localhost:3000/category";
   constructor(private httpClient:HttpClient) { }
 
   getAllCategory():Observable<Category[]> {

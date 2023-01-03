@@ -1,0 +1,73 @@
+<h1>Danh sách sản phẩm</h1>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="d-flex">
+      <input class="form-control me-2" type="text" placeholder="searchName" aria-label="searchName" [(ngModel)]="searchName">
+      <select [(ngModel)]="searchCategory">
+        <option  [ngValue]="''">----vui lòng ------</option>
+        <option *ngFor="let iteam of categoryList" >{{iteam.name}}</option>
+      </select>
+      <button  class="btn btn-outline-success" type="submit" (click)="return()">X</button>
+      <button  class="btn btn-outline-success" type="submit" (click)="search()">Search</button>
+    </div>
+  </div>
+</nav>
+<table class="table" *ngIf="products.length!==0 else noData">
+  <thead>
+  <tr>
+    <td>STT</td>
+    <td>Tên</td>
+    <td>Giá</td>
+    <td>Mô tả</td>
+    <td>Loại sản phẩm</td>
+    <td>xem chi tiết</td>
+    <td>xóa</td>
+    <td>chỉnh sửa</td>
+  </tr>
+  </thead>
+  <tbody  >
+  <tr *ngFor="let p of products |paginate:{itemsPerPage:2,currentPage:page}; index as i ">
+    <td>{{i + 1 +2*(page-1)}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.description}}</td>
+    <td>{{p.category?.name}}</td>
+    <td>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDetail" (click)="product=p">
+        Xem chi tiết
+      </button>
+    </td>
+    <td>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete" (click)="product=p">
+        xóa
+      </button>
+    </td>
+    <td>
+<a [routerLink]="['/product/update',p.id ]"  class="btn btn-danger" >Update</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<ng-template #noData ><h1 class="text-center fw-bold  mt-3">Không có dữ liệu này!</h1></ng-template>
+<pagination-controls (pageChange)="page=$event" ></pagination-controls>
+
+<app-product-detail [productDetail]="product"></app-product-detail>
+  <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalDelete" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalDelete">Modal Xóa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span>Bạn có muốn xóa sản phẩm này không</span>
+          <span style="color: red">{{product.name}}</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">thoát</button>
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="deleteProduct()">xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
