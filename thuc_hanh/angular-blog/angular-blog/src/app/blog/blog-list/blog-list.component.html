@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">author</th>
+    <th scope="col">title</th>
+    <th scope="col">dayUpdate</th>
+    <th scope="col">content</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let blog of blogList">
+    <!--    <th scope="row">{{b.id}}</th>-->
+    <td>{{blog.author}}</td>
+    <td>{{blog.title}}</td>
+    <td>{{blog.dayUpdate}}</td>
+    <td>{{blog.content}}</td>
+
+  </tr>
+  </tbody>
+</table>
+
